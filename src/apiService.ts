@@ -10,7 +10,7 @@ export async function postToNest(formData: any) {
             })
             .catch((error) => {
                 // Handle any errors that may occur during the fetch or processing
-                console.error('Error:', error);
+                return error;
             });
     }
 
@@ -21,7 +21,7 @@ export async function postToNest(formData: any) {
         });
     } catch (error: unknown) {
         if (error instanceof Error) {
-            console.error(`Download error: ${error.message}`);
+            console.log(`Download error: ${error.message}`);
         }
     }
 }
