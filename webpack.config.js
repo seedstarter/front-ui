@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
+const DotenvFlow = require('dotenv-flow-webpack');
 
 module.exports = {
     entry: {
@@ -12,10 +13,9 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
-    mode: 'development',
     devServer: {
       static: path.resolve(__dirname, 'dist'),
-      port: 4200,
+      port: process.env.port,
       hot: true,
       open: true
     },
@@ -70,5 +70,9 @@ module.exports = {
             filename: 'index.html',
             template: 'src/index.html'
         }),
+        new DotenvFlow({
+          path: './config',
+          pattern: '.env[.node_env]'
+        })
       ],
 };

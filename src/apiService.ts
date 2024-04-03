@@ -1,3 +1,5 @@
+const USERS_ENDPOINT = process.env.SERVICE_URL;
+
 export async function postToNest(formData: any) {
     async function fetchFile(url: string) {
         return fetch(url, { method: "POST", 
@@ -15,7 +17,7 @@ export async function postToNest(formData: any) {
     }
 
     try {
-        return await fetchFile("http://localhost:8082/users").then((data) => {
+        return await fetchFile(`${USERS_ENDPOINT}:8080/users`).then((data) => {
             console.log('data:', data);
             return data;
         });
