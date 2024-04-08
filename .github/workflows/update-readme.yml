@@ -8,7 +8,7 @@ jobs:
               uses: actions/checkout@v2
             - name: Update README
               run: |
-               svg = '<svg
+               svg=$(echo '<svg
                version="1.1"
                xmlns="http://www.w3.org/2000/svg"
                xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -26,7 +26,7 @@ jobs:
                    font: bold 20px sans-serif;
                  }
                </style>
-               </svg>'
+               </svg>')
                python3 ./helpers/add_to_list.py ./README.md svg 
             - name: Commit and Push Changes
               env: 
