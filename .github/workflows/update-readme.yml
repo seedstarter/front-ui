@@ -1,4 +1,4 @@
-name: Update README
+name: Add IF score and update README.md
 on: [push]
 jobs:
     update-readme:
@@ -17,12 +17,14 @@ jobs:
                   <span style="color:#006d69">*Carbon Embodied: 0.35 gCO2eq/s*</span>
                 '
                 echo "$SVG_STRING" >> $FILE_PATH
-            - name: Commit and Push Changes
+            - name: Config global git user
+              env: 
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: git config --global user.name "${{ github.actor }}"
+            - name: Commit and push
               env: 
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
-               git config --global user.name "${{ github.actor }}"
-               git config --global user.email "${{ github.actor }}@users.noreply.github.com"
                git checkout -b readme-update-workflow-4
                git add README.md
                git commit -m "IF score label"
