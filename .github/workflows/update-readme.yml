@@ -8,26 +8,29 @@ jobs:
               uses: actions/checkout@v2
             - name: Update README
               run: |
-               svg=$(echo '<svg
-               version="1.1"
-               xmlns="http://www.w3.org/2000/svg"
-               xmlns:xlink="http://www.w3.org/1999/xlink"
-               width="350"
-               height="50">
-               <image
-                 x="-40"
-                 y="0"
-                 width="128"
-                 height="50"
-                 href="https://if.greensoftware.foundation/img/logo.svg" />
-               <text x="60" y="33" class="heavy" fill="#006d69">${carbonEmbodiedVal} gCO2eq/s</text>
-               <style>
-                 .heavy {
-                   font: bold 20px sans-serif;
-                 }
-               </style>
-               </svg>')
-               python3 ./helpers/add_to_list.py ./README.md svg 
+                FILE_PATH="./README.md"
+                SVG_STRING='
+                <svg
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="350"
+                  height="50">
+                  <image
+                    x="-40"
+                    y="0"
+                    width="128"
+                    height="50"
+                    href="https://if.greensoftware.foundation/img/logo.svg" />
+                  <text x="60" y="33" class="heavy" fill="#006d69">Carbon Embodied: 0.35 gCO2eq/s</text>
+                  <style>
+                    .heavy {
+                      font: bold 20px sans-serif;
+                    }
+                  </style>
+                </svg>
+                '
+                echo "$SVG_STRING" >> $FILE_PATH
             - name: Commit and Push Changes
               env: 
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
