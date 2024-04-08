@@ -37,6 +37,7 @@ jobs:
               run: |
                git config --global user.name "${{ github.actor }}"
                git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+               git checkout -b readme-update-workflow
                git add README.md
                git commit -m "added IF score label to docs list"
-               git push test-yml
+               git push origin readme-update-workflow
