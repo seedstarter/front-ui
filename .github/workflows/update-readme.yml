@@ -11,10 +11,10 @@ jobs:
                 FILE_PATH="./README.md"
                 SVG_STRING='
                   <image
-                    width="128"
-                    height="50"
+                    width="65"
+                    height="65"
                     src="https://if.greensoftware.foundation/img/logo.svg">
-                  <font style="color:#006d69">Carbon Embodied: 0.35 gCO2eq/s</font>
+                  <span style="color:#006d69">*Carbon Embodied: 0.35 gCO2eq/s*</span>
                 '
                 echo "$SVG_STRING" >> $FILE_PATH
             - name: Commit and Push Changes
@@ -23,7 +23,7 @@ jobs:
               run: |
                git config --global user.name "${{ github.actor }}"
                git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-               git checkout -b readme-update-workflow-2
+               git checkout -b readme-update-workflow-4
                git add README.md
-               git commit -m "added IF score label to docs list"
-               git push origin readme-update-workflow-2
+               git commit -m "IF score label"
+               git push origin readme-update-workflow-4
