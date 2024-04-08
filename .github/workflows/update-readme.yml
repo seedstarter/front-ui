@@ -25,7 +25,7 @@ jobs:
               env: 
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
-               git checkout -b readme-update-workflow-4
+               git checkout -b readme-update-workflow-5
                git add README.md
                git commit -m "IF score label"
-               git push origin readme-update-workflow-4
+               git push origin readme-update-workflow-5
