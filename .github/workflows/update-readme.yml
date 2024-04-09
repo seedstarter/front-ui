@@ -9,7 +9,7 @@ jobs:
             - name: Update README
               run: |
                 FILE_PATH="./README.md"
-                echo '<img src="https://if.greensoftware.foundation/img/logo.svg"> <span style="color:#green">Carbon Embodied: 0.35 gCO2eq/s*</span>' >> $FILE_PATH
+                echo '<img width="40" height="40" src="https://if.greensoftware.foundation/img/logo.svg"><span style="color:#green">*Carbon Embodied: 0.35 gCO2eq/s*</span>' >> $FILE_PATH
             - name: Extract branch name
               shell: bash
               run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" 
