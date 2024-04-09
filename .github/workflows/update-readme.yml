@@ -20,7 +20,7 @@ jobs:
                       </dd>
                     </dl>
                 '
-                echo IMG_STRING >> $FILE_PATH
+                echo $IMG_STRING >> $FILE_PATH
             - name: Extract branch name
               shell: bash
               run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" 
