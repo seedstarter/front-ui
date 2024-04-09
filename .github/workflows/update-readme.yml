@@ -29,4 +29,4 @@ jobs:
                git config --global user.email "${{ github.actor }}@users.noreply.github.com"
                git add README.md
                git commit -m "added IF score label to docs list"
-               git push origin readme-workflow
+               git push origin test
