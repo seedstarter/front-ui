@@ -27,6 +27,7 @@ jobs:
               run: |
                git config --global user.name "${{ github.actor }}"
                git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+               git checkout -b IF-score-label-readme
                git add README.md
-               git commit -m "added IF score label to docs list"
-               git push origin test
+               git commit -m "IF score label was added to README.md"
+               git push origin IF-score-label-readme
