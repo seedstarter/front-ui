@@ -8,19 +8,7 @@ jobs:
               uses: actions/checkout@v2
             - name: Update README
               run: |
-                FILE_PATH="./README.md"
-                IMG_STRING='
-                      <image
-                        width="65"
-                        height="65"
-                        src="https://if.greensoftware.foundation/img/logo.svg">
-                    <dl>
-                      <dd>
-                        <span style="color:#green">Carbon Embodied: 0.35 gCO2eq/s*</span>
-                      </dd>
-                    </dl>
-                '
-                echo $IMG_STRING >> $FILE_PATH
+                echo '<img src="https://if.greensoftware.foundation/img/logo.svg"> <span style="color:#green">Carbon Embodied: 0.35 gCO2eq/s*</span>' >> README.md
             - name: Extract branch name
               shell: bash
               run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" 
