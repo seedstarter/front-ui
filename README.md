@@ -23,3 +23,4 @@ on second terminal run npm command: npm run serve
 ** This is crucial when using webpack-dev-server with current configurations, serving an html file. Webpack is watching static files within the dist directory.
 
 
+<image width="40" height="40" src="https://if.greensoftware.foundation/img/logo.svg"><span style="color:#green">*Carbon Embodied:* [0.35] gCO2eq/s/s</span>
