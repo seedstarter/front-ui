@@ -20,6 +20,7 @@ front-ui is a template project for building user interfaces using modern web dev
 - On two sepereted terminals navigate to projects root directory:
 - on first terminal run npm command: npm run build:dev 
 - on second terminal run npm command: npm run serve 
+
 **It's essential to utilize this specific sequence of commands when working with webpack-dev-server alongside your existing configurations. This ensures smooth serving of an HTML file while webpack continuously monitors static files within the dist directory.
 
 
