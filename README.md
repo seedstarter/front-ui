@@ -5,7 +5,7 @@ front-ui is a template project for building user interfaces using modern web dev
 ## Features:
 
 -  Webpack Configuration: The project is pre-configured with webpack to bundle and optimize your JavaScript and TypeScript files for deployment.
-HTML Templating: HTML files are generated using HtmlWebpackPlugin, allowing you to create dynamic HTML templates with ease.
+-  HTML Templating: HTML files are generated using HtmlWebpackPlugin, allowing you to create dynamic HTML templates with ease.
 -  Development Server: Utilize webpack-dev-server to quickly preview and develop your application in a local development environment. The server supports hot module replacement, providing a seamless development experience.
 -  SCSS Support: Easily style your application using SCSS syntax, which is processed and compiled into CSS during the build process. PostCSS and Autoprefixer are included to ensure cross-browser compatibility.
 -  Bootstrap Integration: Bootstrap is included as a dependency, providing a comprehensive set of UI components and utilities to streamline your UI development process.
@@ -23,9 +23,3 @@ HTML Templating: HTML files are generated using HtmlWebpackPlugin, allowing you 
 - **This is crucial when using webpack-dev-server with current configurations, serving an html file. Webpack is watching static files within the dist directory.
 
 
-
-
-<image width="40" height="40" src="https://if.greensoftware.foundation/img/logo.svg"><span style="color:#green">*Carbon Embodied:* [0.35] gCO2eq/s/s</span>
-<image width="40" height="40" src="https://if.greensoftware.foundation/img/logo.svg"><span style="color:#green">*Carbon Embodied:* [0.35] gCO2eq/s/s</span>
-<image width="40" height="40" src="https://if.greensoftware.foundation/img/logo.svg"><span style="color:#green">*Carbon Embodied:* [0.35] gCO2eq/s/s</span>
-<image width="40" height="40" src="https://if.greensoftware.foundation/img/logo.svg"><span style="color:#green">*Carbon Embodied:* [0.35] gCO2eq/s/s</span>
